@@ -122,7 +122,37 @@ $ kill -SIGKILL 1234
 - ~/.vimrc를 연다 -> let @a='매크로 문자열'
 
 - 매크로 사용 예시
-![image](https://user-images.githubusercontent.com/104439372/171180365-fef7cb18-5821-4cc1-b80a-b391f08a763c.png)
+
+변경 전
+
+```
+package vars
+
+var (
+        version string
+        Debug bool  
+)
+
+
+```
+
+-----------
+
+변경 후
+
+```
+package vars
+
+var (
+        //Version TODO
+        version string
+        //Debug TODO
+        Debug bool  
+)
+
+
+```
+
 
 G(마지막 라인으로 이동) -> **qa(매크로 a시작) -> -O(현재 라인을 다음줄로 밀고 입력 시작)
 ->//입력 -> ctrl-n(단어 탐색) ->TODO 입력 -> <Esc> -> q(매크로 실행 중지)
